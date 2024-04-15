@@ -13,18 +13,12 @@ $ npm install --save bulldorizer
 ## Usage
 
 ```js
-const bulldorizer = require("bulldorizer");
-```
-
-or...
-
-```js
-import bulldorizer from "bulldorizer";
+import { __chunk, __compact, __doubles } from "bulldorizer";
 ```
 
 ### API
 
-#### bulldorizer.chunk(array, size)
+#### Function Signature: `__chunk(array, size)`
 
 **Params**
 
@@ -36,17 +30,30 @@ import bulldorizer from "bulldorizer";
 - **{Array}**: Returns the new array of chunks.
 
 ```js
-bulldorizer.chunk([1, 2, 3, 4, 5], 2);
-//=> [[1, 2], [3, 4], [5]]
+const arr = [
+  "apple",
+  "banana",
+  "orange",
+  "grape",
+  "kiwi",
+  "melon",
+  "strawberry",
+  "peach",
+  "plum",
+  "pear",
+];
 
-bulldorizer.chunk([1, 2, 3, 4, 5, 6, 7, 8], 3);
-//=> [[1, 2, 3], [4, 5, 6], [7, 8]]
+const result = __chunk(arr, 2);
+// result: [['apple', 'banana'], [ 'orange', 'grape'], ['kiwi', 'melon'], ['strawberry', 'peach'], ['plum', 'pear']]
 
-bulldorizer.chunk([1, 2, 3, 4, 5], 4);
-//=> [[1, 2, 3, 4], [5]]
+const result = __chunk(arr, 3);
+// result: [['apple', 'banana', 'orange'], ['grape', 'kiwi', 'melon'], ['strawberry', 'peach', 'plum'], ['pear']]
+
+const result = __chunk(arr, 4);
+// result: [['apple', 'banana', 'orange', 'grape'], ['kiwi', 'melon', 'strawberry', 'peach'], ['plum', 'pear']]
 ```
 
-#### bulldorizer.compact(array)
+#### Function Signature: `__compact(array)`
 
 **Params**
 
@@ -57,11 +64,13 @@ bulldorizer.chunk([1, 2, 3, 4, 5], 4);
 - **{Array}**: Returns the new array of filtered values.
 
 ```js
-bulldorizer.compact([1, 3, 0, false, 2, "", 4, undefined, 5, NaN]);
+const arr = [1, 3, 0, false, 2, "", 4, undefined, 5, NaN];
+
+console.log(__compact(arr));
 //=> [1, 3, 2, 4, 5]
 ```
 
-#### bulldorizer.doubles(array)
+#### Function Signature: `__doubles(array)`
 
 **Params**
 
@@ -72,8 +81,10 @@ bulldorizer.compact([1, 3, 0, false, 2, "", 4, undefined, 5, NaN]);
 - **{Array}**: Returns the new array with each number doubled.
 
 ```js
-bulldorizer.doubles([1, 2, 3, 4, 5]);
-//=> [2, 4, 6, 8, 10]
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(__doubles(arr));
+//=> [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 ```
 
 ## Contributing
