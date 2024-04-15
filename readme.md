@@ -18,7 +18,7 @@ import { __chunk, __compact, __doubles } from "bulldorizer";
 
 ### API
 
-#### Function Signature: `__chunk(array, size)`
+#### Signature: `__chunk(array, size)`
 
 **Params**
 
@@ -53,7 +53,7 @@ const result = __chunk(arr, 4);
 // result: [['apple', 'banana', 'orange', 'grape'], ['kiwi', 'melon', 'strawberry', 'peach'], ['plum', 'pear']]
 ```
 
-#### Function Signature: `__compact(array)`
+#### Signature: `__compact(array)`
 
 **Params**
 
@@ -70,7 +70,7 @@ console.log(__compact(arr));
 //=> [1, 3, 2, 4, 5]
 ```
 
-#### Function Signature: `__doubles(array)`
+#### Signature: `__doubles(array)`
 
 **Params**
 
@@ -105,6 +105,6 @@ MIT © [Vinyl Davyl](https://github.com/Vinyl-Davyl)
 
 ## About
 
-This package was created and maintained by [Vinyl-Davyl](https://github.com/Vinyl-Davyl). We aim to provide powerful and efficient array manipulation utilities for JavaScript developers. If you have any questions or feedback, feel free to reach out to us on [GitHub](https://github.com/Vinyl-Davyl) or [Twitter](https://x.com/Vinylchi).
+This package is created and maintained by [Vinyl-Davyl](https://github.com/Vinyl-Davyl). We aim to provide powerful and efficient array manipulation utilities for JavaScript developers. If you have any questions or feedback, feel free to reach out to us on [GitHub](https://github.com/Vinyl-Davyl) or [Twitter](https://x.com/Vinylchi).
 
 ---
